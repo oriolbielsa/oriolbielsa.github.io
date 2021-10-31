@@ -1,0 +1,187 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 600px;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Spiral Plot - Mean Rainfall in Spain</title>
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <script data-require="d3@4.0.0" data-semver="4.0.0" src="https://d3js.org/d3.v4.js"></script>
+  </head>
+<center>
+<b><p style="font-family:lora;font-size:25px;">SPIRAL PLOT CHART</p></b>
+<p style="font-family:lora;font-size:15px;">Promedio de lluvia en España (ene-15 a nov-20)</p>
+</center>
+
+  <body>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/timeline.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+
+
+var chart = am4core.create("chartdiv", am4plugins_timeline.SpiralChart);
+chart.levelCount = 3;
+chart.curveContainer.padding(40,40,40,40);
+
+var data = [];
+data.push({ date: new Date(2014,12,1), value: 58});
+data.push({ date: new Date(2015,1,1), value: 52});
+data.push({ date: new Date(2015,2,1), value: 58});
+data.push({ date: new Date(2015,3,1), value: 44});
+data.push({ date: new Date(2015,4,1), value: 17});
+data.push({ date: new Date(2015,5,1), value: 40});
+data.push({ date: new Date(2015,6,1), value: 20});
+data.push({ date: new Date(2015,7,1), value: 25});
+data.push({ date: new Date(2015,8,1), value: 42});
+data.push({ date: new Date(2015,9,1), value: 75});
+data.push({ date: new Date(2015,10,1), value: 49});
+data.push({ date: new Date(2015,11,1), value: 17});
+data.push({ date: new Date(2015,12,1), value: 90});
+data.push({ date: new Date(2016,1,1), value: 88});
+data.push({ date: new Date(2016,2,1), value: 62});
+data.push({ date: new Date(2016,3,1), value: 92});
+data.push({ date: new Date(2016,4,1), value: 78});
+data.push({ date: new Date(2016,5,1), value: 16});
+data.push({ date: new Date(2016,6,1), value: 12});
+data.push({ date: new Date(2016,7,1), value: 8});
+data.push({ date: new Date(2016,8,1), value: 24});
+data.push({ date: new Date(2016,9,1), value: 56});
+data.push({ date: new Date(2016,10,1), value: 107});
+data.push({ date: new Date(2016,11,1), value: 48});
+data.push({ date: new Date(2016,12,1), value: 41});
+data.push({ date: new Date(2017,1,1), value: 72});
+data.push({ date: new Date(2017,2,1), value: 61});
+data.push({ date: new Date(2017,3,1), value: 26});
+data.push({ date: new Date(2017,4,1), value: 47});
+data.push({ date: new Date(2017,5,1), value: 32});
+data.push({ date: new Date(2017,6,1), value: 18});
+data.push({ date: new Date(2017,7,1), value: 29});
+data.push({ date: new Date(2017,8,1), value: 15});
+data.push({ date: new Date(2017,9,1), value: 26});
+data.push({ date: new Date(2017,10,1), value: 44});
+data.push({ date: new Date(2017,11,1), value: 65});
+data.push({ date: new Date(2017,12,1), value: 64});
+data.push({ date: new Date(2018,1,1), value: 73});
+data.push({ date: new Date(2018,2,1), value: 163});
+data.push({ date: new Date(2018,3,1), value: 89});
+data.push({ date: new Date(2018,4,1), value: 65});
+data.push({ date: new Date(2018,5,1), value: 50});
+data.push({ date: new Date(2018,6,1), value: 21});
+data.push({ date: new Date(2018,7,1), value: 20});
+data.push({ date: new Date(2018,8,1), value: 32});
+data.push({ date: new Date(2018,9,1), value: 98});
+data.push({ date: new Date(2018,10,1), value: 106});
+data.push({ date: new Date(2018,11,1), value: 28});
+data.push({ date: new Date(2018,12,1), value: 55});
+data.push({ date: new Date(2019,1,1), value: 15});
+data.push({ date: new Date(2019,2,1), value: 26});
+data.push({ date: new Date(2019,3,1), value: 96});
+data.push({ date: new Date(2019,4,1), value: 24});
+data.push({ date: new Date(2019,5,1), value: 18});
+data.push({ date: new Date(2019,6,1), value: 24});
+data.push({ date: new Date(2019,7,1), value: 23});
+data.push({ date: new Date(2019,8,1), value: 52});
+data.push({ date: new Date(2019,9,1), value: 63});
+data.push({ date: new Date(2019,10,1), value: 119});
+data.push({ date: new Date(2019,11,1), value: 112});
+data.push({ date: new Date(2019,12,1), value: 71});
+data.push({ date: new Date(2020,1,1), value: 9});
+data.push({ date: new Date(2020,2,1), value: 92});
+data.push({ date: new Date(2020,3,1), value: 91});
+data.push({ date: new Date(2020,4,1), value: 54});
+data.push({ date: new Date(2020,5,1), value: 34});
+data.push({ date: new Date(2020,6,1), value: 14});
+data.push({ date: new Date(2020,7,1), value: 27});
+data.push({ date: new Date(2020,8,1), value: 34});
+data.push({ date: new Date(2020,9,1), value: 69});
+data.push({ date: new Date(2020,10,1), value: 69});
+
+
+chart.data = data;
+
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+dateAxis.renderer.grid.template.location = 0;
+dateAxis.renderer.line.disabled = true;
+dateAxis.cursorTooltipEnabled = false;
+dateAxis.renderer.minGridDistance = 30;
+dateAxis.minZoomCount = 5;
+
+var labelTemplate = dateAxis.renderer.labels.template;
+labelTemplate.fontSize = 10;
+labelTemplate.verticalCenter = "middle";
+labelTemplate.horizontalCenter = "middle";
+labelTemplate.padding(3, 3, 3, 3);
+
+labelTemplate.adapter.add("rotation", function (rotation, target) {
+  var value = target.dataItem.value;
+  var endvalue = target.dataItem.endValue;
+
+  var position = dateAxis.valueToPosition(value + (endvalue - value) / 2);
+
+  var angle = dateAxis.renderer.positionToAngle(position);
+  return angle;
+})
+
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.innerRadius = -25;
+valueAxis.renderer.radius = 25;
+valueAxis.renderer.minGridDistance = 15;
+valueAxis.renderer.axisLocation = 1;
+
+
+var valueAxisLabelTemplate = valueAxis.renderer.labels.template;
+valueAxisLabelTemplate.rotation = - 90;
+valueAxisLabelTemplate.fontSize = 10;
+valueAxisLabelTemplate.horizontalCenter = "left";
+
+
+valueAxisLabelTemplate.adapter.add("rotation", function (rotation, target) {
+  return dateAxis.renderer.positionToAngle(1) - 90;
+})
+
+chart.seriesContainer.zIndex = -1;
+
+var series = chart.series.push(new am4plugins_timeline.CurveColumnSeries());
+series.dataFields.dateX = "date";
+series.dataFields.valueY = "value";
+series.tooltipText = "{valueY}";
+series.tooltip.pointerOrientation = "vertical";
+series.tooltip.background.fillOpacity = 0.7;
+series.strokeWidth = 2;
+
+chart.cursor = new am4plugins_timeline.CurveCursor();
+chart.cursor.xAxis = dateAxis;
+chart.cursor.yAxis = valueAxis;
+chart.cursor.lineY.disabled = true;
+
+chart.scrollbarX = new am4core.Scrollbar();
+chart.scrollbarX.width = am4core.percent(80);
+chart.scrollbarX.align = "center";
+
+}); // end am4core.ready()
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+</body>
+</html>
