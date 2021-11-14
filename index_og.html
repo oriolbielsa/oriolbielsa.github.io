@@ -14,10 +14,12 @@
       <link rel="stylesheet" type="text/css" href="style.css"/>
       <script data-require="d3@4.0.0" data-semver="4.0.0" src="https://d3js.org/d3.v4.js"></script>
   </head>
+<center>
+<b><p style="font-family:lora;font-size:25px;">SPIRAL PLOT CHART</p></b>
+<p style="font-family:lora;font-size:15px;">Promedio de lluvia en España (ene-15 a nov-20)</p>
+</center>
 
   <body>
-
-<body background="fondo.png" bgproperties="FIXED" style="background-repeat: no-repeat; background-position: center center;">
 
 <!-- Resources -->
 <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
@@ -173,7 +175,6 @@ chart.cursor.yAxis = valueAxis;
 chart.cursor.lineY.disabled = true;
 
 chart.scrollbarX = new am4core.Scrollbar();
-chart.scrollbarX.parent = chart.bottomAxesContainer;
 chart.scrollbarX.width = am4core.percent(80);
 chart.scrollbarX.align = "center";
 
